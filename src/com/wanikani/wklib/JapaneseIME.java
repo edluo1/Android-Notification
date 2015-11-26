@@ -296,7 +296,8 @@ public class JapaneseIME {
 		ja = s [s.length - 1];
 		for (i = 0; i < s.length - 1; i++) {
 			put (s [i] + "u", ja);
-			put (s [i] + "wa", ja + "ぁ");
+			if (!s [i].equals("n"))
+				put (s [i] + "wa", ja + "ぁ");
 		}
 	}
 	
